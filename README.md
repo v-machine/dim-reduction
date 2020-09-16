@@ -1,2 +1,2 @@
 # dim-reduction
-Dimension reduction method comparison for large scale image classification
+Dimension reduction methods comparison for large scale image classification.
