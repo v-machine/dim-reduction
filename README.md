@@ -9,7 +9,7 @@ Collaborated with: Jessica Zhu, Amy Lee, Anthony Wu
 In this project we compare the performance of 3 different dimension reduction techniques which can be deployed in a classification task pipeline. The three methods chosen are PCA, Kernel PCA, and Deep Autoencoder. We use PCA as a baseline to compare again the other two non-linear methods.
 
 ## Responsibility
-In this group project I was responsible for the following: <\br>
+In this group project I was responsible for the following tasks: </br>
 - Configure and maintain GCP instance
 - Setting up [batch data loading and preprocessing](notebooks/batch_data_loading.ipynb) pipeline
 - Trained autoencoder [(1)](notebooks/autoencoder_full_pipeline.ipynb) and [(2)](notebooks/autoencoder_with_pooling.ipynb) for dimensional reduction.
