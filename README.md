@@ -32,13 +32,20 @@ Using trained model from each method, we performed dimensional reduction to N x 
 
 ## Result
 ### Scalability
+
 ### Complexity (Runtime)
+
 ### Complexity (Memory)
+
 ### Reconstruction Error
+
 ### Classification Performance
+
 ### User-friendliness
+
 ### Reconstruction Quality
+
 ### Cosine Similarity
 
 ## Conclusion
-Overall, based on each of the methods we evaluated, we conclude that PCA performs the best in terms of computation time, memory usage, and accuracy. However, the Deep Autoencoder appears to be the most scalable, and could be improved if we could determine a way to leverage a distributed system to reduce the computation time.
+Overall, we concluded that PCA performs the best in terms of computation time, memory usage, and accuracy. However, the Deep Autoencoder appears to be the most scalable, and could be improved if we could determine a way to leverage a distributed system to reduce the computation time.
