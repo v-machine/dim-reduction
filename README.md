@@ -40,27 +40,36 @@ Using trained model from each method, we performed dimensional reduction to N x 
 ### Scalability
 <img src="report_images/result_scalibility.JPG" width="600">
 While the autoencoder can handle the entire dataset of 1.8 millilon images, PCA and Kernel PCA can only process 500k and 50k images respectively.
+
 ### Complexity (Runtime)
 <img src="report_images/result_runtime_complexity.JPG" width="600">
 PCA has the best performance, its runtime increase is almost undetectable in comparison to the other two methods. We hypothesize that the drastic increase in the Autoencoder’s runtime might be due to the fact that we could not take advantage of distributed batching.
+
 ### Complexity (Memory)
 <img src="report_images/result_memory_complexity.JPG" width="600">
 We measured the memory usage by recording the Resident Set Size (RSS), which is the amount of memory occupied by a process that is held in main memory before and after computation. We see relatively linear increases for both KPCA and Autoencoder. However, for unknown reason, we see a decrease in RSS for PCA, which we suppect might have been due to faults in our measurement and requires further investigation.
+
 ### Reconstruction Error
 <img src="report_images/result_reconstruction_error.JPG" width="600">
 In reconstruction error, we see that Autoencoder is generally able to obtain a very low RMSE whereas PCA has higher RMSE. We did not plot RMSE for KPCA for its reconstruction is not straightforward.
+
 ### Classification Performance
 <img src="report_images/result_classification_accuracy.JPG" width="600">
 We found that Autoencoder performs best, PCA performs about the same as the Autoencoder, and Kernel PCA achieves the worst result. None of the three reduction methods perform as well as the baseline, but this is expected since dimension-reduction causes a loss of information that could influence the prediction.
+
 ### User-friendliness
 We measured the user-friendness in terms of the difficulty of model tuning. PCA has no parameters to tune while Kernel PCA only has one parameter (i.e. gamma, a parameter of the radial basis function). Autoencoder, on the other hand, have many parameters, for instance, the number of epochs, the optimization method, optimization algorithm, activation function, number of layers and size, etc. Hence we conclude that the Deep Autoencoder is the least user-friendly.
+
 ### Reconstruction Quality
 <img src="report_images/result_reconstruction_comparison.JPG" width="600">
 We were surprised that the PCA performance was comparable to that of the Autoencoder despite its noise-like reconstruction, but we hypothesize that the reconstruction dissimilarity may be due to the fact that PCA and Autoencoder encode information differently.
+
 ### Cosine Similarity
 <img src="report_images/result_cosine_similarity.JPG" width="600">
 We found that images reduced using PCA and Kernel PCA are more similar to each other than those of the Autoencoder. This differs slightly from our original expectations where we believed that Kernal PCA would captures non-linear features which PCA would not. Taking into account all results, we see that PCA and Autoencoder have different approaches to decomposing images but both can achieve satisfying results in the context of image classification.
+
 ## Conclusion
 Overall, we concluded that PCA performs the best in terms of computation time, memory usage, and accuracy. However, the Deep Autoencoder appears to be the most scalable, and could be improved if we could determine a way to leverage a distributed system to reduce the computation time.
 
-[Read Full Report Here](https://github.com/v-machine/dim-reduction/blob/master/10605%20Final%20Report.pdf)
+
+### [Read Full Report Here](https://github.com/v-machine/dim-reduction/blob/master/10605%20Final%20Report.pdf)
