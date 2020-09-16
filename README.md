@@ -10,6 +10,7 @@ In this project we compare the performance of 3 different dimension reduction te
 
 ## Dataset
 We tests our methods on the 365Places dataset, consisting of 1.8 million images (105 GB) of places that are evenly distributed among 365 categories.
+![](/report_images/365Places_dataset.JPG)
 
 ## Evaluation:
 - Runtime
@@ -22,8 +23,12 @@ We tests our methods on the 365Places dataset, consisting of 1.8 million images 
 ## Implementation
 The implementation was done using Google Cloud Platform, running Tensorflow on single instances and PySpark on a Dataproc cluster. We had initially implemented PCA and Kernel PCA in spark and autoencoder in tensorflow. But due to Tensorflow lacking native support in Spark, we had decided to move all training to Tensorflow for a consistent comparison. 
 
+![](report_images/implementation.JPG)
+
 ## Data Preprocessing
 To avoid loading 100GB of data into memory, we rely on batch loading to simultaneously load, preprocess, and store the data on disk. Additionally we decided to reduce image dimensions to 32 by 32 with a single channel to speed up training. 
+
+![](report_images/pipeline.JPG)
 
 ## Dimensional Reduction
 Once the data is preprocessed, we stress-test the three methods to gauge the maximum amount of training data each can handle and obtain a comparison metrics. Based on that we train the best model for each methods.
@@ -32,20 +37,20 @@ Using trained model from each method, we performed dimensional reduction to N x 
 
 ## Result
 ### Scalability
-
+![](report_images/result_scalibility.JPG)
 ### Complexity (Runtime)
-
+![](report_images/result_runtime_complexity.JPG)
 ### Complexity (Memory)
-
+![](report_images/result_memory_complexity.JPG)
 ### Reconstruction Error
-
+![](report_images/result_reconstruction_error.JPG)
 ### Classification Performance
-
+![](report_images/result_classification_accuracy.JPG)
 ### User-friendliness
 
 ### Reconstruction Quality
-
+![](report_images/result_reconstruction_quality.JPG)
 ### Cosine Similarity
-
+![](report_images/result_cosine_similarity.JPG)
 ## Conclusion
 Overall, we concluded that PCA performs the best in terms of computation time, memory usage, and accuracy. However, the Deep Autoencoder appears to be the most scalable, and could be improved if we could determine a way to leverage a distributed system to reduce the computation time.
