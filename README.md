@@ -11,7 +11,7 @@ In this project we compare the performance of 3 different dimension reduction te
 ## Dataset
 We tests our methods on the 365Places dataset, consisting of 1.8 million images (105 GB) of places that are evenly distributed among 365 categories.
 
-<img src="report_images/365Places_dataset.JPG" width="600">
+<img src="report_images/365Places_dataset.JPG" width="800">
 
 ## Evaluation:
 - Runtime
@@ -24,7 +24,7 @@ We tests our methods on the 365Places dataset, consisting of 1.8 million images 
 ## Implementation
 The implementation was done using Google Cloud Platform, running Tensorflow on single instances and PySpark on a Dataproc cluster. We had initially implemented PCA and Kernel PCA in spark and autoencoder in tensorflow. But due to Tensorflow lacking native support in Spark, we had decided to move all training to Tensorflow for a consistent comparison. 
 
-<img src="report_images/implementation.JPG" width="600">
+<img src="report_images/implementation.JPG" width="800">
 
 ## Data Preprocessing
 To avoid loading 100GB of data into memory, we rely on batch loading to simultaneously load, preprocess, and store the data on disk. Additionally we decided to reduce image dimensions to 32 by 32 with a single channel to speed up training. 
