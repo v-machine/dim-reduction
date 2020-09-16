@@ -52,6 +52,6 @@ Using trained model from each method, we performed dimensional reduction to N x 
 ### Reconstruction Quality
 <img src="report_images/result_reconstruction_quality.JPG" width="600">
 ### Cosine Similarity
-<img src="report_images/result_cosine_similarity.JPG" width="600">
+<img src="report_images/result_reconstruction_comparison.JPG" width="600">
 ## Conclusion
 Overall, we concluded that PCA performs the best in terms of computation time, memory usage, and accuracy. However, the Deep Autoencoder appears to be the most scalable, and could be improved if we could determine a way to leverage a distributed system to reduce the computation time.
