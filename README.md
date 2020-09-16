@@ -12,8 +12,8 @@ In this project we compare the performance of 3 different dimension reduction te
 In this group project I was responsible for the following tasks: </br>
 - Configure and maintain GCP instance
 - Setting up [batch data loading and preprocessing](notebooks/batch_data_loading.ipynb) pipeline
-- Trained autoencoder [(1)](notebooks/autoencoder_full_pipeline.ipynb) and [(2)](notebooks/autoencoder_with_pooling.ipynb) for dimensional reduction.
-- Monitor [memory usage](memory_usage_info.ipynb) and evaluate performances for autoencoder
+- Developed end-to-end pipeline for autoencoder [(1)](notebooks/autoencoder_full_pipeline.ipynb) and [(2)](notebooks/autoencoder_with_pooling.ipynb) for dimensional reduction.
+- Monitor [memory usage](notebooks/memory_usage_info.ipynb) and evaluate performances for the autoencoder method
 
 
 ## Dataset
